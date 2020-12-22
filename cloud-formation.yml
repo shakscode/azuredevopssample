@@ -1,0 +1,10 @@
+---
+Resources:
+    testinstance:
+        Type: AWS::EC2::Instance
+        Properties:
+            ImageId: ami-04d29b6f966df1537
+            SubnetId: subnet-6c32990a
+            InstanceType: t2.micro
+       
+
