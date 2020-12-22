@@ -1,0 +1,17 @@
+# Starter pipeline
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: cloudformationcreateorupdatestack@1
+    displayName: create formation stack
+    inputs:
+      awsCredentials: 'aws-test'
+      regionname: 'us-east-1'
+      stackName: test
+      templateSource: 'file'
+      templatefile: 'cloud-formation.yml'
